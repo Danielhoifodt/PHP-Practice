@@ -1,9 +1,7 @@
 # PHP-Practice
 A program that saves text to database... try it to fully understand (Norwegian)
 
-##
-
-Endringer fra originalkode:
+## Endringer fra originalkode
 
 - Jeg ville ta originalkoden og konvertere den til å følge moderne PHP-standarder med OOP og separasjon av logikk og visning av data
 
