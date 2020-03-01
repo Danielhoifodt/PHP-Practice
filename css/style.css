@@ -1,0 +1,7 @@
+#button_change:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.border{
+    border:1px solid black;
+}
