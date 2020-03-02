@@ -1,0 +1,5 @@
+.env
+
+##### Composer
+composer.phar
+/vendor/
