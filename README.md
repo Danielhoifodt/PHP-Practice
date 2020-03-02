@@ -9,4 +9,8 @@ A program that saves text to database... try it to fully understand (Norwegian)
 
 3. Anbefales å legge filene i htdocs hvis du bruker xampp.
 
-4. Gå til localhost/php-practice for å teste programmet.
+4. Kjør ``` composer install ``` for å installere nødvendige pakker.
+
+5. Gi nytt navn til .env.example og gi den navnet .env og sett nødvendige variabelnavn
+
+6. Gå til localhost/php-practice for å teste programmet.
