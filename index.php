@@ -1,5 +1,4 @@
 <?php
-
 require_once "./vendor/autoload.php";
 require_once "./db/db.php";
 
@@ -29,7 +28,7 @@ if (isset($_POST["edit"])) {
 
     $stmt_edit_task->bindParam(':id', $id, PDO::PARAM_INT);
 
-    $stmt_edit_task->bindParam(':text_content_new', $text_content_new);    
+    $stmt_edit_task->bindParam(':text_content_new', $text_content_new);
     $stmt_edit_task->execute();
 }
 if (isset($_POST["submit"])) {
@@ -37,7 +36,6 @@ if (isset($_POST["submit"])) {
     $stmt_post = $pdo->prepare("INSERT INTO practice_table (text_content)VALUE(:text_content)");
 
     $stmt_post->bindParam(':text_content', $text_content);
-
     $stmt_post->execute();
 }
 
@@ -53,13 +51,9 @@ if (isset($_POST["delete"])) {
 if (isset($_GET["del_task"])) {
     $del_one = $_GET["del_task"];
     $stmt_del_one = $pdo->prepare("DELETE FROM practice_table WHERE id = :id");
-
     $stmt_del_one->bindParam(':id', $del_one);
-
     $stmt_del_one->execute();
 }
-
-
 $stmt_get = $pdo->query("SELECT * FROM practice_table");
 ?>
 
@@ -113,11 +107,11 @@ $stmt_get = $pdo->query("SELECT * FROM practice_table");
                         } else {
                             $id = $row["id"];
                             $text_content = $row["text_content"];
-                        }
-                    ?>
+                        } ?>
                         <li class="list-group-item"><?php echo $text_content; ?><div class="float-right"><a id="button_change" style="color:#62bfcc;" onclick="onButtonEdit(<?php echo $id; ?>);">Endre</a>&nbsp;&nbsp;<a style="color:red;" href="index.php?del_task=<?php echo $id; ?>">Slette</a></div>
                         </li>
-                    <?php } ?>
+                    <?php
+                    } ?>
                 </ul>
             </div>
         </div>
