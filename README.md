@@ -1,7 +1,18 @@
 # PHP-Practice
 A program that saves text to database... try it to fully understand (Norwegian)
 
-## Instruksjon
+## Endringer fra originalkode
+
+- Jeg ville ta originalkoden og konvertere den til å følge moderne PHP-standarder med OOP og separasjon av logikk og visning av data (Twig?)
+
+- ~~Gjøre om hardkodet mySQL informasjon til environment variabler~~
+
+- Implementere DevOps best practice
+
+- Implementere kommentarer og tips om hvordan jeg har implementert løsningen
+
+
+## Instruksjoner
 
 1. Last ned med git eller .zip
 
