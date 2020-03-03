@@ -2,7 +2,7 @@
 require_once "./vendor/autoload.php";
 require_once "./db/db.php";
 
-$id = 0;
+$edit_content_id = 0;
 $delete_content = false;
 $show_edit_content = "";
 $updated = false;
