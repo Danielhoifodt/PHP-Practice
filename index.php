@@ -108,7 +108,7 @@ $stmt_get = $pdo->query("SELECT * FROM practice_table");
                             $id = $row["id"];
                             $text_content = $row["text_content"];
                         } ?>
-                        <li class="list-group-item"><?php echo $text_content; ?><div class="float-right"><a id="button_change" style="color:#62bfcc;" onclick="onButtonEdit(<?php echo $id; ?>);">Endre</a>&nbsp;&nbsp;<a style="color:red;" href="index.php?del_task=<?php echo $id; ?>">Slette</a></div>
+                        <li class="list-group-item"><?php echo htmlentities($text_content); ?><div class="float-right"><a id="button_change" style="color:#62bfcc;" onclick="onButtonEdit(<?php echo $id; ?>);">Endre</a>&nbsp;&nbsp;<a style="color:red;" href="index.php?del_task=<?php echo $id; ?>">Slette</a></div>
                         </li>
                     <?php
                     } ?>
