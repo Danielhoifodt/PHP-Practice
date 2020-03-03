@@ -64,11 +64,17 @@ $stmt_get = $pdo->query("SELECT * FROM practice_table");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
+    
+    
     <title>PHP Practice</title>
 </head>
 
 <body>
+
     <div class="container border">
         <div class="row">
             <div class="col-7">
@@ -88,7 +94,23 @@ $stmt_get = $pdo->query("SELECT * FROM practice_table");
                         </div>
                     <?php endif; ?>
                     <div class="form-group">
-                        <input type="submit" class="form-control btn btn-danger ml-2" name="delete" value="Slett liste">
+                        <button type="button" id="open_modal" class="form-control btn btn-danger ml-2" data-toggle="modal" data-target="#myModal">Slett liste</button>
+                    </div>
+                    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Slette alle</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Er du sikker på du vil slette alle postene?<p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Avbryt</button>
+                                    <button type="submit" class="btn btn-primary" name="delete">Ja</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </form>
                 <br><br>
@@ -120,6 +142,7 @@ $stmt_get = $pdo->query("SELECT * FROM practice_table");
         function onButtonEdit(id) {
             window.location.href = "index.php?edit=" + id;
         }
+    
     </script>
 </body>
 
