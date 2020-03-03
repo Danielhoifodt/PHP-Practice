@@ -7,9 +7,6 @@ $delete_content = false;
 $show_edit_content = "";
 $updated = false;
 
-if (isset($_POST["submit_edit"])) {
-    $edit_content = $_POST["edit"];
-}
 if (isset($_GET["edit"])) {
     $edit_content_id = $_GET["edit"];
     $updated = true;
